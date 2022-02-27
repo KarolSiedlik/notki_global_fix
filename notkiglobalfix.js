@@ -77,7 +77,7 @@
             const day = date_time[1].slice(0, -1);
             const year = date_time[2];
             let time = date_time[3].split(':').map(x => Number(x));
-            return new Date(2000 + date[2], date[1] - 1, date[0], time[0], time[1], time[2]);
+            return new Date(year, month - 1, day, time[0], time[1], time[2]);
         },
         date_to_datetime_string: function (date) {
             let two_digit_function = function (number) {
