@@ -396,7 +396,7 @@
             let loses = get_loses();
             if (loses) {
                 let rebuild_time = Helper.calculate_rebuild_time(loses);
-                if (rebuild_time > Settings.rebuild_time_threshold) {
+                if (NotesScript.attack_info.battle_time && rebuild_time > Settings.rebuild_time_threshold) {
                     NotesScript.attack_info.rebuild_time = new Date(NotesScript.attack_info.battle_time.getTime() + rebuild_time);
                 }
             }
